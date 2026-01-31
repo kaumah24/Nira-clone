@@ -1,0 +1,8 @@
+{
+  "name": "NIRA Uganda Smart Portal",
+  "description": "A modernized, AI-enhanced Progressive Web App (PWA) for the National Identification and Registration Authority (NIRA) of Uganda.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

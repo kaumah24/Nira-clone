@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIRA Uganda - National Identification and Registration Authority</title>
+  
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#004a99">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1160/1160358.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            uganda: {
+              yellow: '#FCD116',
+              red: '#CE1126',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .uganda-stripe {
+      height: 6px;
+      background: linear-gradient(90deg, 
+        #000 0%, #000 16.6%, 
+        #fcd116 16.6%, #fcd116 33.3%, 
+        #ce1126 33.3%, #ce1126 50%, 
+        #000 50%, #000 66.6%, 
+        #fcd116 66.6%, #fcd116 83.3%, 
+        #ce1126 83.3%, #ce1126 100%
+      );
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(registration => console.log('SW registered:', registration))
+          .catch(error => console.log('SW registration failed:', error));
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+{
+  "name": "NIRA Uganda Smart Portal",
+  "short_name": "NIRA Uganda",
+  "description": "Official National Identification and Registration Authority portal of Uganda with AI features.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#004a99",
+  "theme_color": "#004a99",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/1160/1160358.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
